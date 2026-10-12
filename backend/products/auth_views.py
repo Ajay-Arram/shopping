@@ -3,9 +3,19 @@ from django.middleware.csrf import get_token
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.authentication import SessionAuthentication
 from cart.models import Cart
 
 User = get_user_model()
+
+
+class CsrfExemptSessionAuthentication(SessionAuthentication):
+    """
+    SessionAuthentication that allows API calls without enforcing CSRF,
+    preventing 403 Forbidden errors when submitting login/register requests from frontend.
+    """
+    def enforce_csrf(self, request):
+        return
 
 
 class LoginAPIView(APIView):
@@ -13,6 +23,7 @@ class LoginAPIView(APIView):
     POST /api/auth/login/
     Payload: {"username": "...", "password": "..."}
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
     def post(self, request):
         username = request.data.get('username', '').strip()
         password = request.data.get('password', '')
@@ -60,6 +71,8 @@ class RegisterAPIView(APIView):
     POST /api/auth/register/
     Payload: {"username": "...", "email": "...", "password": "..."}
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         username = request.data.get('username', '').strip()
         email = request.data.get('email', '').strip()
@@ -91,6 +104,8 @@ class LogoutAPIView(APIView):
     """
     POST /api/auth/logout/
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         logout(request)
         return Response({'message': 'Logged out successfully.'}, status=status.HTTP_200_OK)
@@ -100,6 +115,8 @@ class CurrentUserAPIView(APIView):
     """
     GET /api/auth/user/
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def get(self, request):
         if request.user.is_authenticated:
             return Response({

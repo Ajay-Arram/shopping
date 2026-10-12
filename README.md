@@ -98,75 +98,65 @@ Open a terminal in the project directory (`c:\website`):
 pip install -r requirements.txt
 ```
 
-### 2. Configure MySQL Database
+### 2. Database Setup: Supabase PostgreSQL (Production) or MySQL (Local)
 
-Ensure your MySQL service is running. Log in to MySQL and create the database:
+#### A. Connecting to Supabase PostgreSQL (Recommended for Production & Render)
+1. Log in to [Supabase](https://supabase.com) and open your project dashboard.
+2. Go to **Project Settings** (gear icon) -> **Database**.
+3. Under **Connection string**, select **URI** and choose **Connection pooler** mode (port `6543` for Transaction or `5432` for Session).
+   > **Note for Render**: Render free/starter tiers use IPv4 networking. Always select the **Connection pooler** string (`*.pooler.supabase.com`) which provides full IPv4 routing support.
+4. Replace `[YOUR-PASSWORD]` with your actual Supabase database password.
+5. In `.env` (or in Render environment variables), set:
+   ```env
+   DATABASE_URL=postgresql://postgres.yourprojectref:yourpassword@aws-0-ap-south-1.pooler.supabase.com:6543/postgres
+   ```
 
+#### B. Local MySQL Fallback (Optional)
+If `DATABASE_URL` is not set, Django falls back to local MySQL:
 ```sql
 CREATE DATABASE IF NOT EXISTS shopping_cart CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
-
-### 3. Configure Environment Variables (`.env`)
-
-Copy `.env.example` to `.env` (or update existing `.env`):
-
-```bash
-cp .env.example .env
-```
-
-Configure your credentials inside `.env`:
-
-```env
-# Django Settings
-SECRET_KEY=django-insecure-shopping-cart-secure-random-key-development-2026
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1,*
-
-# MySQL Database Settings
-DB_NAME=shopping_cart
-DB_USER=root
-DB_PASSWORD=Mysql@123
-DB_HOST=localhost
-DB_PORT=3306
-
-# Amazon Authorized Product API Credentials (PA-API 5.0)
-# Obtain these from: https://affiliate-program.amazon.in/assoc_credentials/home
-AMAZON_API_KEY=your_amazon_access_key
-AMAZON_API_SECRET=your_amazon_secret_key
-AMAZON_PARTNER_TAG=your_partner_tag-21
-AMAZON_HOST=webservices.amazon.in
-AMAZON_REGION=eu-west-1
-
-# Optional Alternative: RapidAPI Real-Time Amazon Data API
-RAPIDAPI_KEY=
-RAPIDAPI_HOST=real-time-amazon-data.p.rapidapi.com
-
-# Optional Alternative: Rainforest API
-RAINFOREST_API_KEY=
-```
-
-> **Where to enter your credentials**:
-> - If you have an **Amazon Associates Account**: add your `AMAZON_API_KEY` (Access Key ID), `AMAZON_API_SECRET` (Secret Access Key), and `AMAZON_PARTNER_TAG` (Store Tracking ID) in `.env`.
-> - If you have a **RapidAPI Amazon Data subscription**: add `RAPIDAPI_KEY` in `.env`.
-> - If you haven't set up API keys yet: the built-in **Authorized Curated Catalog** automatically provides authentic Amazon ASINs, live links, and high-resolution product data across all 11 categories so you can develop and test immediately!
 
 ---
 
 ## 🚀 Database Setup & Migrations
 
-Navigate to the `backend` folder:
+Run database migrations against your configured database (Supabase or local):
 
 ```bash
-cd backend
+python backend/manage.py migrate
 ```
 
-Apply database migrations to MySQL:
+### Loading Existing Catalog & Sample Data into Supabase
+A pre-exported dataset containing all 11 categories, 15 products, and initial users is included at `backend/initial_data.json`. To load it into Supabase PostgreSQL:
 
 ```bash
-python manage.py makemigrations products
-python manage.py makemigrations cart
-python manage.py migrate
+python backend/manage.py loaddata backend/initial_data.json
 ```
+
+---
+
+## ☁️ Deploying on Render
+
+1. Create a new **Web Service** on Render and link your GitHub repository (`master` branch).
+2. Configure service settings:
+   - **Name**: `shopping`
+   - **Root Directory**: leave blank (repository root)
+   - **Environment**: `Python 3`
+   - **Build Command**: `./build.sh` (or `pip install -r requirements.txt && python backend/manage.py migrate --noinput && python backend/manage.py collectstatic --noinput`)
+   - **Start Command**: `gunicorn wsgi:application` (or `gunicorn --chdir backend backend.wsgi:application`)
+3. Set the following **Environment Variables** in Render:
+   - `DATABASE_URL`: Your Supabase pooler connection URI (e.g. `postgresql://postgres.xxx:pass@aws-0-ap-south-1.pooler.supabase.com:6543/postgres`)
+   - `SECRET_KEY`: A secure random secret key (e.g. generate via `python -c "import secrets; print(secrets.token_urlsafe(50))"`)
+   - `DEBUG`: `False`
+   - `ALLOWED_HOSTS`: `localhost,127.0.0.1,shopping.onrender.com,*.onrender.com`
+   - `CSRF_TRUSTED_ORIGINS`: `https://shopping.onrender.com,https://*.onrender.com`
+   - `PYTHON_VERSION`: `3.11.9` (or `3.12.x` / `3.14.x`)
+4. Click **Create Web Service** (or manual deploy).
+5. Once deployment succeeds, open the Render Shell to load initial data if needed:
+   ```bash
+   python backend/manage.py loaddata backend/initial_data.json
+   ```
 
 ---
 

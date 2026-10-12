@@ -1,8 +1,18 @@
 const API_BASE = (function () {
+  const host = window.location.hostname || '127.0.0.1';
+  const isLocalhost = host === 'localhost' || host === '127.0.0.1';
+
+  // In production (Render, custom domain), communicate with current origin
+  if (!isLocalhost) {
+    return `${window.location.origin}/api`;
+  }
+
+  // When testing directly through Django server locally (e.g. port 8000 or 8080)
   if (window.location.port === '8000' || window.location.port === '8080') {
     return `${window.location.origin}/api`;
   }
-  const host = window.location.hostname || '127.0.0.1';
+
+  // When frontend is served via Live Server (port 5500, etc.)
   return `http://${host}:8000/api`;
 })();
 

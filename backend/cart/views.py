@@ -11,6 +11,19 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.middleware.csrf import get_token
 
 
+from rest_framework.authentication import SessionAuthentication
+
+
+class CsrfExemptSessionAuthentication(SessionAuthentication):
+    """
+    SessionAuthentication that does not enforce CSRF validation on REST endpoints.
+    Eliminates 403 Forbidden errors when guest or authenticated users interact
+    with cart APIs from browsers, different origins, or AJAX requests.
+    """
+    def enforce_csrf(self, request):
+        return
+
+
 @ensure_csrf_cookie
 def csrf_cookie(request):
     token = get_token(request)
@@ -55,6 +68,8 @@ class CartDetailView(APIView):
     GET /api/cart/
     Returns current cart data.
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def get(self, request):
         cart, session_id = get_or_create_cart(request)
         serializer = CartSerializer(cart)
@@ -68,6 +83,8 @@ class CartAddView(APIView):
     POST /api/cart/add/
     Payload: {"product_id": 1, "quantity": 1}
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         product_id = request.data.get('product_id')
         if not product_id:
@@ -110,6 +127,8 @@ class CartUpdateView(APIView):
     POST /api/cart/update/
     Payload: {"product_id": 1, "quantity": 3} or {"item_id": 1, "quantity": 3}
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         cart, session_id = get_or_create_cart(request)
         product_id = request.data.get('product_id')
@@ -150,6 +169,8 @@ class CartRemoveView(APIView):
     POST /api/cart/remove/
     Payload: {"product_id": 1} or {"item_id": 1}
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         cart, session_id = get_or_create_cart(request)
         product_id = request.data.get('product_id')
@@ -173,6 +194,8 @@ class CartClearView(APIView):
     POST /api/cart/clear/
     Empties the cart.
     """
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def post(self, request):
         cart, session_id = get_or_create_cart(request)
         cart.items.all().delete()
