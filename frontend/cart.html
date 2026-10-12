@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Cart | Shopping Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-main">
+      <a href="index.html" class="site-logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+        </svg>
+        <div class="logo-text">Shopping<span>Cart</span></div>
+      </a>
+
+      <div class="header-delivery">
+        <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <div>
+          <span>Deliver to</span>
+          <strong>India</strong>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="header-search-form">
+          <select class="search-category-select" id="header-category-select">
+            <option value="">All Categories</option>
+          </select>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="header-search-input" 
+            placeholder="Search products..." 
+            autocomplete="off"
+          />
+          <button type="submit" class="search-submit-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-link" id="header-account-link">
+          <span>Hello, Sign in</span>
+          <strong>Account & Lists</strong>
+        </a>
+
+        <a href="cart.html" class="cart-link">
+          <div class="cart-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span class="cart-badge" id="header-cart-badge">0</span>
+          </div>
+          <span class="cart-label">Cart</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Page Layout -->
+  <main class="container">
+    <div class="cart-layout">
+      
+      <!-- Cart Items Section -->
+      <section class="cart-items-container" id="cart-items-container">
+        <!-- Loaded dynamically from Django backend -->
+      </section>
+
+      <!-- Cart Order Summary -->
+      <aside class="cart-summary-card" id="cart-summary-card" style="display: none;">
+        <h2 class="summary-title">Order Summary</h2>
+
+        <div class="summary-free-delivery-badge">
+          <svg style="width:20px;height:20px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>Your order qualifies for <strong>FREE Delivery</strong></span>
+        </div>
+
+        <div class="summary-row">
+          <span>Items (<span id="summary-items-count">0</span>):</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Delivery Charges:</span>
+          <span style="color:var(--success); font-weight:600;">FREE</span>
+        </div>
+
+        <div class="summary-row total-row">
+          <span>Order Total:</span>
+          <span id="summary-total" style="color:#b12704;">₹0</span>
+        </div>
+
+        <button type="button" class="btn btn-primary checkout-btn" id="checkout-btn">
+          Proceed to Buy
+        </button>
+
+        <div class="summary-guarantee">
+          <p>✓ 100% Purchase Protection</p>
+          <p>✓ Fast, Authorized Delivery</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Checkout Confirmation Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-card">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+      </div>
+      <h3 class="modal-title">Ready to place your order?</h3>
+      <p class="modal-desc">Your order contains authorized items and will be scheduled for priority shipment to your registered address.</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <button type="button" class="btn btn-outline" id="modal-close-btn">Continue Shopping</button>
+        <button type="button" class="btn btn-primary" id="place-order-confirm-btn" onclick="confirmPlaceOrder()">Confirm Order</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+      Back to top
+    </a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shopping Cart Inc. Authorized Product API Integration.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Online Shopping for Electronics, Mobiles, Fashion & More</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-main">
+      <a href="index.html" class="site-logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+        </svg>
+        <div class="logo-text">Shopping<span>Cart</span></div>
+      </a>
+
+      <div class="header-delivery">
+        <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <div>
+          <span>Deliver to</span>
+          <strong>India</strong>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="header-search-form">
+          <select class="search-category-select" id="header-category-select">
+            <option value="">All Categories</option>
+          </select>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="header-search-input" 
+            placeholder="Search products, brands, or deals..." 
+            autocomplete="off"
+          />
+          <button type="submit" class="search-submit-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-link" id="header-account-link">
+          <span>Hello, Sign in</span>
+          <strong>Account & Lists</strong>
+        </a>
+
+        <a href="cart.html" class="cart-link">
+          <div class="cart-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span class="cart-badge" id="header-cart-badge">0</span>
+          </div>
+          <span class="cart-label">Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Secondary Navigation -->
+    <nav class="header-subnav">
+      <div class="subnav-inner">
+        <a href="category.html?category=Electronics" class="subnav-link">Electronics</a>
+        <a href="category.html?category=Audio%20%26%20Gaming" class="subnav-link">Audio & Gaming</a>
+        <a href="category.html?category=Mobiles" class="subnav-link">Mobiles</a>
+        <a href="category.html?category=Laptops" class="subnav-link">Laptops</a>
+        <a href="category.html?category=Cameras" class="subnav-link">Cameras</a>
+        <a href="category.html?category=Watches" class="subnav-link">Watches</a>
+        <a href="category.html?category=Fashion" class="subnav-link">Fashion</a>
+        <a href="category.html?category=Beauty" class="subnav-link">Beauty</a>
+        <a href="category.html?category=Home%20Appliances" class="subnav-link">Home Appliances</a>
+        <a href="category.html?category=Furniture" class="subnav-link">Furniture</a>
+        <a href="category.html?category=Toys" class="subnav-link">Toys</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">Authorized Product Showcase</span>
+        <h1 class="hero-title">Experience Premium Gadgets <span>& Modern Deals</span></h1>
+        <p class="hero-subtitle">Discover dynamic product catalogs verified directly through official APIs. Enjoy competitive pricing, verified stock, and authentic links.</p>
+        <div class="hero-actions">
+          <a href="search.html?search=gaming" class="btn btn-primary">Shop Gaming Deals</a>
+          <a href="category.html?category=Electronics" class="btn btn-amazon">Browse Electronics</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80" alt="Tech Banner">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="container" style="padding-top: 50px;">
+    
+    <!-- Categories Strip -->
+    <section class="categories-strip-section">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <a href="category.html" class="section-link">View All Categories ›</a>
+      </div>
+      <div class="categories-carousel" id="categories-carousel-container">
+        <!-- Dynamically rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section style="margin-bottom: 40px;">
+      <div class="section-header">
+        <h2 class="section-title">Popular & Top-Rated Products</h2>
+        <a href="search.html?sort=rating" class="section-link">See More ›</a>
+      </div>
+      <div class="products-grid" id="popular-products-grid">
+        <!-- Dynamically loaded from Django API -->
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section style="margin-bottom: 50px;">
+      <div class="section-header">
+        <h2 class="section-title">Featured Products & Today's Deals</h2>
+        <a href="search.html" class="section-link">Explore All Products ›</a>
+      </div>
+      <div class="products-grid" id="featured-products-grid">
+        <!-- Dynamically loaded from Django API -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+      Back to top
+    </a>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="#">About Shopping Cart</a></li>
+          <li><a href="#">Official API Partnership</a></li>
+          <li><a href="#">Careers & Culture</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <ul>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="#">Sell on Shopping Cart</a></li>
+          <li><a href="#">Amazon Associates Program</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="#">Shipping Rates & Policies</a></li>
+          <li><a href="#">Returns & Replacements</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shopping Cart Inc. All rights reserved. Powered by Django REST Framework & Official Product APIs.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Load Popular products (sort by rating, limit 4)
+      loadProductsSection('#popular-products-grid', 'sort=rating&limit=4');
+      // 2. Load Featured products (all products)
+      loadProductsSection('#featured-products-grid', 'limit=8');
+    });
+  </script>
+</body>
+</html>

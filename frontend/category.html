@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Showcase | Shopping Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-main">
+      <a href="index.html" class="site-logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+        </svg>
+        <div class="logo-text">Shopping<span>Cart</span></div>
+      </a>
+
+      <div class="header-delivery">
+        <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <div>
+          <span>Deliver to</span>
+          <strong>India</strong>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <form class="search-form" id="header-search-form">
+          <select class="search-category-select" id="header-category-select">
+            <option value="">All Categories</option>
+          </select>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="header-search-input" 
+            placeholder="Search within this category or all products..." 
+            autocomplete="off"
+          />
+          <button type="submit" class="search-submit-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-link" id="header-account-link">
+          <span>Hello, Sign in</span>
+          <strong>Account & Lists</strong>
+        </a>
+
+        <a href="cart.html" class="cart-link">
+          <div class="cart-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span class="cart-badge" id="header-cart-badge">0</span>
+          </div>
+          <span class="cart-label">Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Secondary Navigation -->
+    <nav class="header-subnav">
+      <div class="subnav-inner">
+        <a href="category.html?category=Electronics" class="subnav-link">Electronics</a>
+        <a href="category.html?category=Audio%20%26%20Gaming" class="subnav-link">Audio & Gaming</a>
+        <a href="category.html?category=Mobiles" class="subnav-link">Mobiles</a>
+        <a href="category.html?category=Laptops" class="subnav-link">Laptops</a>
+        <a href="category.html?category=Cameras" class="subnav-link">Cameras</a>
+        <a href="category.html?category=Watches" class="subnav-link">Watches</a>
+        <a href="category.html?category=Fashion" class="subnav-link">Fashion</a>
+        <a href="category.html?category=Beauty" class="subnav-link">Beauty</a>
+        <a href="category.html?category=Home%20Appliances" class="subnav-link">Home Appliances</a>
+        <a href="category.html?category=Furniture" class="subnav-link">Furniture</a>
+        <a href="category.html?category=Toys" class="subnav-link">Toys</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Layout with Sidebar -->
+  <main class="container">
+    <div class="catalog-layout">
+      
+      <!-- Left Filters Sidebar -->
+      <aside class="catalog-sidebar">
+        <h3 class="sidebar-title">Categories</h3>
+        <div class="filter-group">
+          <ul class="filter-list" id="sidebar-categories-list">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h4 class="filter-group-title">Availability</h4>
+          <label style="font-size: 0.88rem; display: flex; align-items: center; gap: 8px; cursor: pointer;">
+            <input type="checkbox" id="filter-in-stock">
+            <span>Include In-Stock Only</span>
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h4 class="filter-group-title">Price Filter (₹)</h4>
+          <div class="price-filter-inputs">
+            <input type="number" id="filter-min-price" class="price-input" placeholder="Min" min="0">
+            <span>-</span>
+            <input type="number" id="filter-max-price" class="price-input" placeholder="Max" min="0">
+          </div>
+          <button type="button" id="apply-price-filter-btn" class="btn btn-outline" style="width: 100%; margin-top: 10px; padding: 6px;">
+            Apply Price
+          </button>
+        </div>
+      </aside>
+
+      <!-- Right Catalog Main Area -->
+      <section class="catalog-main">
+        <div class="catalog-toolbar">
+          <div>
+            <h1 class="section-title" id="search-keyword-heading" style="font-size: 1.3rem;">Category</h1>
+            <div class="results-count" id="search-results-count">Loading products...</div>
+          </div>
+          <div>
+            <select id="sort-select" class="sort-select">
+              <option value="-created_at">Featured / Newest</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="rating_desc">Avg. Customer Review</option>
+              <option value="discount">Highest Discount</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="search-results-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+      Back to top
+    </a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shopping Cart Inc. Authorized Amazon & External API Product Data.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
