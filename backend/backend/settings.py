@@ -23,6 +23,9 @@ DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 allowed_hosts_env = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,*')
 ALLOWED_HOSTS = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
+render_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
+if render_hostname and render_hostname not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(render_hostname)
 if '.onrender.com' not in ALLOWED_HOSTS and '*' not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append('.onrender.com')
 
@@ -80,6 +83,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database Configuration
 # Supports Supabase PostgreSQL via DATABASE_URL or local MySQL / SQLite fallback
 DATABASE_URL = os.getenv('DATABASE_URL')
+IS_RENDER = os.getenv('RENDER') == 'true' or bool(os.getenv('RENDER_EXTERNAL_HOSTNAME'))
 
 if DATABASE_URL:
     DATABASES = {
@@ -89,12 +93,26 @@ if DATABASE_URL:
             conn_health_checks=True,
         )
     }
+    db_default = DATABASES['default']
     # Supabase PostgreSQL / PgBouncer connection optimizations
-    if 'postgresql' in DATABASES['default'].get('ENGINE', ''):
-        DATABASES['default']['DISABLE_SERVER_SIDE_CURSORS'] = True
-        if 'OPTIONS' not in DATABASES['default']:
-            DATABASES['default']['OPTIONS'] = {}
-        DATABASES['default']['OPTIONS']['sslmode'] = 'require'
+    if 'postgresql' in db_default.get('ENGINE', ''):
+        db_default['DISABLE_SERVER_SIDE_CURSORS'] = True
+        if not isinstance(db_default.get('OPTIONS'), dict):
+            db_default['OPTIONS'] = {}
+        db_default['OPTIONS'].setdefault('sslmode', 'require')
+
+        # When using Supabase PgBouncer transaction pooler (port 6543),
+        # disable persistent connections and prepared statements.
+        if str(db_default.get('PORT')) == '6543':
+            db_default['CONN_MAX_AGE'] = 0
+            db_default['OPTIONS']['prepare_threshold'] = None
+elif IS_RENDER:
+    # Guard against accidental localhost MySQL fallback when deployed to Render
+    from django.core.exceptions import ImproperlyConfigured
+    raise ImproperlyConfigured(
+        "DATABASE_URL environment variable is missing on Render. "
+        "Please add DATABASE_URL (Supabase PostgreSQL connection string) in your Render Web Service Environment settings."
+    )
 elif os.getenv('DB_NAME'):
     # Local MySQL (existing development setup)
     DATABASES = {
@@ -225,6 +243,11 @@ CSRF_TRUSTED_ORIGINS = [
 render_external_url = os.getenv('RENDER_EXTERNAL_URL')
 if render_external_url and render_external_url not in CSRF_TRUSTED_ORIGINS:
     CSRF_TRUSTED_ORIGINS.append(render_external_url)
+
+if render_hostname:
+    render_origin = f'https://{render_hostname}'
+    if render_origin not in CSRF_TRUSTED_ORIGINS:
+        CSRF_TRUSTED_ORIGINS.append(render_origin)
 
 csrf_origins_env = os.getenv('CSRF_TRUSTED_ORIGINS', '')
 if csrf_origins_env:

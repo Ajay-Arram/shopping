@@ -3,6 +3,8 @@
 *.env
 .env.*
 !.env.example
+backup_*.json
+backend/backup_*.json
 
 # Python cache & compiled files
 __pycache__/

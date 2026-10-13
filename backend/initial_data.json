@@ -1,1081 +1,1123 @@
-[
-  {
-    "model": "products.category",
-    "pk": 1,
-    "fields": {
-      "name": "Electronics",
-      "slug": "electronics",
-      "description": "Browse Electronics products and deals",
-      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 2,
-    "fields": {
-      "name": "Audio & Gaming",
-      "slug": "audio-gaming",
-      "description": "Browse Audio & Gaming products and deals",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 3,
-    "fields": {
-      "name": "Mobiles",
-      "slug": "mobiles",
-      "description": "Browse Mobiles products and deals",
-      "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 4,
-    "fields": {
-      "name": "Laptops",
-      "slug": "laptops",
-      "description": "Browse Laptops products and deals",
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 5,
-    "fields": {
-      "name": "Cameras",
-      "slug": "cameras",
-      "description": "Browse Cameras products and deals",
-      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 6,
-    "fields": {
-      "name": "Watches",
-      "slug": "watches",
-      "description": "Browse Watches products and deals",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 7,
-    "fields": {
-      "name": "Fashion",
-      "slug": "fashion",
-      "description": "Browse Fashion products and deals",
-      "image": "https://images.unsplash.com/photo-1542272604-780c96856475?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 8,
-    "fields": {
-      "name": "Beauty",
-      "slug": "beauty",
-      "description": "Browse Beauty products and deals",
-      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 9,
-    "fields": {
-      "name": "Home Appliances",
-      "slug": "home-appliances",
-      "description": "Browse Home Appliances products and deals",
-      "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 10,
-    "fields": {
-      "name": "Furniture",
-      "slug": "furniture",
-      "description": "Browse Furniture products and deals",
-      "image": "https://images.unsplash.com/photo-1580481077195-c328ad4f3647?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.category",
-    "pk": 11,
-    "fields": {
-      "name": "Toys",
-      "slug": "toys",
-      "description": "Browse Toys products and deals",
-      "image": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=500&auto=format&fit=crop&q=80"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 1,
-    "fields": {
-      "external_product_id": "B09G96TFF7",
-      "name": "Apple iPad (10th Generation): with A14 Bionic chip, 10.9-inch Liquid Retina Display, 64GB, Wi-Fi 6",
-      "brand": "Apple",
-      "description": "Colorfully reimagined and more versatile than ever, the all-screen 10.9-inch iPad with the A14 Bionic chip delivers power for creating, staying connected, and getting things done.",
-      "price": "34990.00",
-      "original_price": "39900.00",
-      "discount": 12,
-      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 1,
-      "rating": "4.60",
-      "review_count": 8420,
-      "stock": 25,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B09G96TFF7",
-      "source": "Amazon",
-      "features": [
-        "Striking 10.9-inch Liquid Retina display with True Tone",
-        "A14 Bionic chip with 6-core CPU and 4-core GPU",
-        "12MP Wide back camera, landscape 12MP Ultra Wide front camera with Center Stage",
-        "Touch ID for secure authentication and Apple Pay",
-        "Wi-Fi 6 and USB-C connector for fast charging and accessories"
-      ],
-      "specifications": {
-        "Brand": "Apple",
-        "Model": "iPad 10th Gen",
-        "Display": "10.9-inch Liquid Retina",
-        "Storage": "64GB",
-        "Processor": "A14 Bionic",
-        "Connectivity": "Wi-Fi 6, Bluetooth 5.2"
-      },
-      "created_at": "2026-10-08T09:40:01.610Z",
-      "updated_at": "2026-10-08T09:40:01.610Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 2,
-    "fields": {
-      "external_product_id": "B0BSHF7WHW",
-      "name": "Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones",
-      "brand": "Sony",
-      "description": "The WH-1000XM5 headphones rewrite the rules for distraction-free listening with 2 processors, 8 microphones for noise cancellation, and Ultra-clear hands-free calling.",
-      "price": "26990.00",
-      "original_price": "34990.00",
-      "discount": 23,
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 2,
-      "rating": "4.70",
-      "review_count": 14500,
-      "stock": 18,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0BSHF7WHW",
-      "source": "Amazon",
-      "features": [
-        "Industry Leading noise cancellation with two processors and 8 microphones",
-        "Magnificent Sound engineered to perfection with High-Resolution Audio",
-        "Crystal clear hands-free calling with 4 beamforming microphones",
-        "Up to 30-hour battery life with quick charge (3 min charge for 3 hours of playback)",
-        "Ultra-comfortable, lightweight design with soft fit leather"
-      ],
-      "specifications": {
-        "Brand": "Sony",
-        "Color": "Black",
-        "Weight": "250 Grams",
-        "Model Name": "WH-1000XM5",
-        "Battery Life": "30 Hours",
-        "Connectivity": "Bluetooth 5.2, 3.5mm Aux"
-      },
-      "created_at": "2026-10-08T09:40:01.622Z",
-      "updated_at": "2026-10-08T09:40:01.622Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 3,
-    "fields": {
-      "external_product_id": "B0C9QYBL8Q",
-      "name": "SteelSeries Arctis Nova 7 Wireless Multi-Platform Gaming Headset",
-      "brand": "SteelSeries",
-      "description": "Nova Acoustic System combines hardware and software for Almighty Audio and immersive gaming with 360° Spatial Audio and Parametric EQ.",
-      "price": "15499.00",
-      "original_price": "19999.00",
-      "discount": 22,
-      "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 2,
-      "rating": "4.50",
-      "review_count": 3200,
-      "stock": 12,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0C9QYBL8Q",
-      "source": "Amazon",
-      "features": [
-        "Simultaneous Wireless (2.4GHz and Bluetooth) permits gaming and mobile audio mixing",
-        "38-hour battery life with USB-C fast charging",
-        "AI-Powered Noise-Cancelling microphone clears background noise",
-        "Multi-platform support for PC, Mac, PlayStation, and Switch"
-      ],
-      "specifications": {
-        "Brand": "SteelSeries",
-        "Model": "Arctis Nova 7",
-        "Battery": "38 Hours",
-        "Microphone": "Bidirectional ClearCast Gen 2",
-        "Frequency Response": "20–22,000 Hz"
-      },
-      "created_at": "2026-10-08T09:40:01.628Z",
-      "updated_at": "2026-10-08T09:40:01.628Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 4,
-    "fields": {
-      "external_product_id": "B0CHX1W1XY",
-      "name": "Apple iPhone 15 (128 GB) - Black",
-      "brand": "Apple",
-      "description": "Dynamic Island bubbles up alerts and Live Activities. 48MP Main camera with 2x Telephoto. Durable color-infused glass and aluminum design with USB-C.",
-      "price": "71290.00",
-      "original_price": "79900.00",
-      "discount": 11,
-      "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 3,
-      "rating": "4.60",
-      "review_count": 9850,
-      "stock": 30,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0CHX1W1XY",
-      "source": "Amazon",
-      "features": [
-        "Dynamic Island bubbles up alerts and Live Activities so you do not miss them",
-        "48MP Main camera with 2X optical-quality Telephoto for breathtaking detail",
-        "A16 Bionic chip powers advanced computational photography and smooth performance",
-        "USB-C connector lets you charge your Mac or iPad with the same cable",
-        "Ceramic Shield front is tougher than any smartphone glass"
-      ],
-      "specifications": {
-        "OS": "iOS 17",
-        "Brand": "Apple",
-        "Model": "iPhone 15",
-        "Camera": "48MP Dual Camera System",
-        "Display": "6.1-inch Super Retina XDR",
-        "Storage": "128 GB"
-      },
-      "created_at": "2026-10-08T09:40:01.639Z",
-      "updated_at": "2026-10-08T09:40:01.639Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 5,
-    "fields": {
-      "external_product_id": "B0CX8X79W7",
-      "name": "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 12GB, 256GB Storage)",
-      "brand": "Samsung",
-      "description": "Meet Galaxy S24 Ultra, the ultimate form of Galaxy Ultra with a new titanium exterior and a 6.8-inch flat display. Powered by Galaxy AI.",
-      "price": "129999.00",
-      "original_price": "134999.00",
-      "discount": 4,
-      "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 3,
-      "rating": "4.70",
-      "review_count": 4120,
-      "stock": 14,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0CX8X79W7",
-      "source": "Amazon",
-      "features": [
-        "Galaxy AI: Circle to Search, Live Translate, and Note Assist",
-        "Titanium Shield built right into the frame with Corning Gorilla Armor",
-        "200MP Main Camera with ProVisual engine and 5x optical zoom",
-        "Built-in S Pen continues the legacy of Note with supreme precision"
-      ],
-      "specifications": {
-        "RAM": "12 GB",
-        "Brand": "Samsung",
-        "Model": "Galaxy S24 Ultra",
-        "Battery": "5000 mAh",
-        "Storage": "256 GB",
-        "Processor": "Snapdragon 8 Gen 3 Mobile Platform"
-      },
-      "created_at": "2026-10-08T09:40:01.645Z",
-      "updated_at": "2026-10-08T09:40:01.645Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 6,
-    "fields": {
-      "external_product_id": "B0CM5JV229",
-      "name": "Apple 2023 MacBook Pro (14-inch, M3 Pro chip, 18GB Unified Memory, 512GB)",
-      "brand": "Apple",
-      "description": "With M3 Pro, the MacBook Pro powers through extremely demanding workflows like manipulating gigapixel panoramas or compiling millions of lines of code.",
-      "price": "194900.00",
-      "original_price": "199900.00",
-      "discount": 3,
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 4,
-      "rating": "4.80",
-      "review_count": 2180,
-      "stock": 8,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0CM5JV229",
-      "source": "Amazon",
-      "features": [
-        "Supercharged by M3 Pro with up to 12-core CPU and 18-core GPU",
-        "Up to 22 hours of battery life thanks to Apple silicon power efficiency",
-        "Liquid Retina XDR display with 1,000 nits sustained and 1,600 nits peak brightness",
-        "Advanced 1080p FaceTime HD camera, studio-quality three-mic array, six-speaker sound"
-      ],
-      "specifications": {
-        "RAM": "18 GB Unified Memory",
-        "SSD": "512 GB",
-        "Brand": "Apple",
-        "Weight": "1.61 kg",
-        "Display": "14.2-inch Liquid Retina XDR",
-        "Processor": "M3 Pro"
-      },
-      "created_at": "2026-10-08T09:40:01.655Z",
-      "updated_at": "2026-10-08T09:40:01.655Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 7,
-    "fields": {
-      "external_product_id": "B0B8C8Q6W3",
-      "name": "Dell XPS 13 Plus Laptop, Intel Core i7-1260P, 16GB, 1TB SSD, 13.4\" UHD+ OLED Touch",
-      "brand": "Dell",
-      "description": "Dell XPS 13 Plus is twice as powerful as before in the same size, crafted with CNC machined aluminum and glass with zero-lattice keyboard.",
-      "price": "149990.00",
-      "original_price": "182000.00",
-      "discount": 18,
-      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 4,
-      "rating": "4.40",
-      "review_count": 920,
-      "stock": 10,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0B8C8Q6W3",
-      "source": "Amazon",
-      "features": [
-        "12th Gen Intel Core i7-1260P 12-core processor",
-        "13.4-inch UHD+ (3840 x 2400) OLED Touch anti-reflective 400-nit display",
-        "Capacitive touch function row, seamless glass touchpad, edge-to-edge keyboard",
-        "Dual fans with larger air intake for quiet, cool high performance"
-      ],
-      "specifications": {
-        "RAM": "16GB LPDDR5",
-        "Brand": "Dell",
-        "Series": "XPS 9320",
-        "Storage": "1TB M.2 PCIe NVMe SSD",
-        "Processor": "Intel Core i7-1260P"
-      },
-      "created_at": "2026-10-08T09:40:01.660Z",
-      "updated_at": "2026-10-08T09:40:01.660Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 8,
-    "fields": {
-      "external_product_id": "B08KSK8G9C",
-      "name": "Sony Alpha 7 IV Full-Frame Mirrorless Interchangeable Lens Camera (Body Only)",
-      "brand": "Sony",
-      "description": "Breathtaking imagery with 33MP Exmor R back-illuminated CMOS sensor and BIONZ XR processing engine with 4K 60p 10-bit 4:2:2 movie recording.",
-      "price": "214990.00",
-      "original_price": "242990.00",
-      "discount": 12,
-      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 5,
-      "rating": "4.80",
-      "review_count": 1640,
-      "stock": 6,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B08KSK8G9C",
-      "source": "Amazon",
-      "features": [
-        "33MP full-frame Exmor R back-illuminated CMOS sensor",
-        "BIONZ XR image processing engine with up to 8x processing power",
-        "Up to 4K 60p 10-bit 4:2:2 movie recording with full pixel readout",
-        "Real-time Eye AF for humans, animals, and birds in stills and video"
-      ],
-      "specifications": {
-        "Brand": "Sony",
-        "Model": "ILCE-7M4",
-        "Mount": "Sony E-Mount",
-        "Video": "4K 60p 10-Bit",
-        "Sensor": "33 MP Full-Frame Exmor R CMOS"
-      },
-      "created_at": "2026-10-08T09:40:01.671Z",
-      "updated_at": "2026-10-08T09:40:01.671Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 9,
-    "fields": {
-      "external_product_id": "B0CHWZ8D6P",
-      "name": "Apple Watch Series 9 [GPS 45mm] Smartwatch with Midnight Aluminum Case",
-      "brand": "Apple",
-      "description": "S9 SiP enables a supersubtle new way to quickly and easily interact with your Apple Watch without touching the screen: Double Tap.",
-      "price": "41900.00",
-      "original_price": "44900.00",
-      "discount": 7,
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 6,
-      "rating": "4.60",
-      "review_count": 5210,
-      "stock": 16,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0CHWZ8D6P",
-      "source": "Amazon",
-      "features": [
-        "Powerful S9 chip with incredible Double Tap gesture control",
-        "Advanced health sensors for ECG, Blood Oxygen, and Sleep stages tracking",
-        "Fall Detection and Crash Detection with Emergency SOS",
-        "Brighter display with up to 2000 nits, twice as bright as Series 8"
-      ],
-      "specifications": {
-        "Size": "45mm",
-        "Brand": "Apple",
-        "Connectivity": "GPS, Bluetooth 5.3, Wi-Fi",
-        "Water Resistance": "50 meters"
-      },
-      "created_at": "2026-10-08T09:40:01.682Z",
-      "updated_at": "2026-10-08T09:40:01.682Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 10,
-    "fields": {
-      "external_product_id": "B08KT37DFG",
-      "name": "Fossil Gen 6 Touchscreen Smartwatch with Alexa Built-in, Speaker, Heart Rate",
-      "brand": "Fossil",
-      "description": "Fossil Gen 6 with Snapdragon Wear 4100+ platform delivers 30% faster app loading and improved battery life with rapid charging.",
-      "price": "14995.00",
-      "original_price": "24995.00",
-      "discount": 40,
-      "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 6,
-      "rating": "4.20",
-      "review_count": 3100,
-      "stock": 19,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B08KT37DFG",
-      "source": "Amazon",
-      "features": [
-        "Snapdragon Wear 4100+ platform delivers ultra-smooth responsiveness",
-        "Charges to 80% in approximately 30 minutes with magnetic charger",
-        "Continuously tracks heart rate and SpO2 blood oxygen measurements",
-        "Make and take phone calls directly from your wrist when connected to phone"
-      ],
-      "specifications": {
-        "OS": "Wear OS by Google",
-        "Brand": "Fossil",
-        "Sensors": "Heart Rate, SpO2, Accelerometer, Compass",
-        "Case Size": "44mm"
-      },
-      "created_at": "2026-10-08T09:40:01.689Z",
-      "updated_at": "2026-10-08T09:40:01.690Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 11,
-    "fields": {
-      "external_product_id": "B0797MG3S1",
-      "name": "Levi's Men's 511 Slim Fit Stretch Jeans",
-      "brand": "Levi's",
-      "description": "A modern slim with room to move, the 511 Slim Fit Jeans are a classic since right now. Cut close through the thigh with a slim leg opening.",
-      "price": "2399.00",
-      "original_price": "3999.00",
-      "discount": 40,
-      "image": "https://images.unsplash.com/photo-1542272604-780c96856475?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 7,
-      "rating": "4.30",
-      "review_count": 8900,
-      "stock": 50,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B0797MG3S1",
-      "source": "Amazon",
-      "features": [
-        "99% Cotton, 1% Elastane with Levi's Flex stretch denim",
-        "Sits below the waist with slim fit from hip to ankle",
-        "Zip fly with signature metal button closure and 5-pocket styling",
-        "Machine washable with reinforced stitching"
-      ],
-      "specifications": {
-        "Fit": "Slim Fit",
-        "Brand": "Levi's",
-        "Closure": "Button & Zip",
-        "Material": "99% Cotton, 1% Elastane"
-      },
-      "created_at": "2026-10-08T09:40:01.698Z",
-      "updated_at": "2026-10-08T09:40:01.698Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 12,
-    "fields": {
-      "external_product_id": "B09DFQJ579",
-      "name": "Philips Satinelle Essential Corded Compact Epilator with Sensitive Cap",
-      "brand": "Philips",
-      "description": "Gentle tweezing discs remove hairs as short as 0.5mm without pulling the skin. Comes with sensitive area cap for delicate zones.",
-      "price": "2499.00",
-      "original_price": "3295.00",
-      "discount": 24,
-      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 8,
-      "rating": "4.20",
-      "review_count": 4780,
-      "stock": 25,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B09DFQJ579",
-      "source": "Amazon",
-      "features": [
-        "Efficient epilation system pulls out hairs from the root",
-        "2 speed settings to grab thinner and thicker hairs",
-        "Profiled, ergonomic grip for comfortable handling",
-        "Washable epilation head for extra hygiene and easy cleaning"
-      ],
-      "specifications": {
-        "Brand": "Philips",
-        "Warranty": "2 Year Worldwide Guarantee",
-        "Power Source": "Corded Electric",
-        "Speed Settings": "2 Speeds"
-      },
-      "created_at": "2026-10-08T09:40:01.709Z",
-      "updated_at": "2026-10-08T09:40:01.709Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 13,
-    "fields": {
-      "external_product_id": "B08N5KM61Q",
-      "name": "Dyson V8 Absolute Cordless Vacuum Cleaner, Powerful Suction with 2 Cleaner Heads",
-      "brand": "Dyson",
-      "description": "Engineered for homes with pets. Captures allergens and expels cleaner air than the air you breathe with up to 40 minutes of fade-free power.",
-      "price": "32900.00",
-      "original_price": "43900.00",
-      "discount": 25,
-      "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 9,
-      "rating": "4.50",
-      "review_count": 6120,
-      "stock": 11,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B08N5KM61Q",
-      "source": "Amazon",
-      "features": [
-        "Powered by the Dyson digital motor V8 spinning at up to 110,000 rpm",
-        "Up to 40 minutes of fade-free suction across carpets and hard floors",
-        "Whole-machine filtration captures 99.99% of microscopic particles as small as 0.3 microns",
-        "No-touch bin emptying drives out dust and debris in a single action"
-      ],
-      "specifications": {
-        "Brand": "Dyson",
-        "Model": "V8 Absolute",
-        "Weight": "2.61 kg",
-        "Run Time": "40 Minutes",
-        "Suction Power": "115 AW"
-      },
-      "created_at": "2026-10-08T09:40:01.717Z",
-      "updated_at": "2026-10-08T09:40:01.717Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 14,
-    "fields": {
-      "external_product_id": "B08B5Q23L8",
-      "name": "Green Soul Monster Ultimate Ergonomic Gaming & Office Chair",
-      "brand": "Green Soul",
-      "description": "Ergonomically engineered gaming chair with premium breathable spandex fabric, heavy-duty metal base, and magnetic memory foam head pillow.",
-      "price": "17990.00",
-      "original_price": "29990.00",
-      "discount": 40,
-      "image": "https://images.unsplash.com/photo-1580481077195-c328ad4f3647?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1505797149-43b0069ec26b?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 10,
-      "rating": "4.50",
-      "review_count": 4190,
-      "stock": 15,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B08B5Q23L8",
-      "source": "Amazon",
-      "features": [
-        "Spandex + PU leather fabric for optimal breathability and luxury comfort",
-        "4D adjustable armrests: height, depth, angle, and horizontal alignment",
-        "Multifunctional frog mechanism with tilt lock between 90° to 180°",
-        "Heavy-duty alloy wheelbase with 65mm smooth polyurethane casters"
-      ],
-      "specifications": {
-        "Brand": "Green Soul",
-        "Recline": "Up to 180 degrees",
-        "Frame Material": "Heavy Duty Steel",
-        "Maximum Weight Capacity": "150 kg"
-      },
-      "created_at": "2026-10-08T09:40:01.726Z",
-      "updated_at": "2026-10-08T09:40:01.726Z"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 15,
-    "fields": {
-      "external_product_id": "B07W5Q7J4Z",
-      "name": "LEGO Technic McLaren Senna GTR Racing Sports Car Building Kit (830 Pieces)",
-      "brand": "LEGO",
-      "description": "Packed with authentic features inspired by the original track-focused supercar icon, from the V8 engine with moving pistons to dihedral doors.",
-      "price": "4999.00",
-      "original_price": "5999.00",
-      "discount": 17,
-      "image": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=800&auto=format&fit=crop&q=80",
-      "additional_images": [
-        "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&auto=format&fit=crop&q=80"
-      ],
-      "category": 11,
-      "rating": "4.80",
-      "review_count": 7820,
-      "stock": 22,
-      "availability": "In Stock",
-      "product_url": "https://www.amazon.in/dp/B07W5Q7J4Z",
-      "source": "Amazon",
-      "features": [
-        "Authentic recreation of the track-focused McLaren Senna GTR supercar",
-        "Realistic details include V8 engine with moving pistons and opening dihedral doors",
-        "Steer the LEGO toy supercar using the wheel on the roof",
-        "830-piece building set makes a stunning display model"
-      ],
-      "specifications": {
-        "Brand": "LEGO",
-        "Model": "42123",
-        "Age Range": "10+ Years",
-        "Number of Pieces": "830"
-      },
-      "created_at": "2026-10-08T09:40:01.737Z",
-      "updated_at": "2026-10-08T09:40:01.737Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 1,
-    "fields": {
-      "user": null,
-      "session_key": "avby6ihrhu6qbue690wvoz1oi4e6n9mx",
-      "created_at": "2026-10-08T09:42:11.145Z",
-      "updated_at": "2026-10-08T09:42:11.145Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 2,
-    "fields": {
-      "user": null,
-      "session_key": "77gx1mv8o7rxl2c5xgks0zj5982pasbm",
-      "created_at": "2026-10-08T09:50:17.554Z",
-      "updated_at": "2026-10-08T09:50:17.554Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 3,
-    "fields": {
-      "user": null,
-      "session_key": "sess_j7kft1mea8bp1bxoga67m",
-      "created_at": "2026-10-08T09:58:39.206Z",
-      "updated_at": "2026-10-08T09:58:39.206Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 5,
-    "fields": {
-      "user": null,
-      "session_key": "sess_mxbhrduh468zo6xr658y5r",
-      "created_at": "2026-10-08T10:14:59.082Z",
-      "updated_at": "2026-10-08T10:14:59.082Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 7,
-    "fields": {
-      "user": 2,
-      "session_key": null,
-      "created_at": "2026-10-08T12:25:10.823Z",
-      "updated_at": "2026-10-08T12:25:10.823Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 9,
-    "fields": {
-      "user": 3,
-      "session_key": null,
-      "created_at": "2026-10-09T07:57:30.631Z",
-      "updated_at": "2026-10-09T07:57:30.631Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 10,
-    "fields": {
-      "user": null,
-      "session_key": "463axtuqjo20k5kkmssxufphuytrfk24",
-      "created_at": "2026-10-09T09:49:25.634Z",
-      "updated_at": "2026-10-09T09:49:25.634Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 11,
-    "fields": {
-      "user": null,
-      "session_key": "0qsjsdk4l9n0hdju1esk0383nawxmutl",
-      "created_at": "2026-10-09T09:49:42.083Z",
-      "updated_at": "2026-10-09T09:49:42.083Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 12,
-    "fields": {
-      "user": null,
-      "session_key": "tr5hduczmqb071afl5ssih7m1exxtwol",
-      "created_at": "2026-10-09T09:50:12.344Z",
-      "updated_at": "2026-10-09T09:50:12.344Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 13,
-    "fields": {
-      "user": null,
-      "session_key": "58385jtxkfwm0v40iymaxwjkk7iqzddk",
-      "created_at": "2026-10-09T09:51:37.611Z",
-      "updated_at": "2026-10-09T09:51:37.611Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 14,
-    "fields": {
-      "user": null,
-      "session_key": "aecxwvs8tnfzyll0j19wgec31vtj4vkw",
-      "created_at": "2026-10-09T09:52:12.547Z",
-      "updated_at": "2026-10-09T09:52:12.547Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 15,
-    "fields": {
-      "user": null,
-      "session_key": "iczhmi1s6kwwk4gc0f86cskqz2xhi6x3",
-      "created_at": "2026-10-09T09:55:37.085Z",
-      "updated_at": "2026-10-09T09:55:37.085Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 16,
-    "fields": {
-      "user": 1,
-      "session_key": null,
-      "created_at": "2026-10-09T09:58:52.748Z",
-      "updated_at": "2026-10-09T09:58:52.748Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 17,
-    "fields": {
-      "user": null,
-      "session_key": "xm6ytdk5q2z7mtjaaqgzv981stui30ex",
-      "created_at": "2026-10-09T09:59:01.963Z",
-      "updated_at": "2026-10-09T09:59:01.963Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 18,
-    "fields": {
-      "user": null,
-      "session_key": "zcmwmdkj9p69vt52n4h2vq2z2inl7qs7",
-      "created_at": "2026-10-09T09:59:22.753Z",
-      "updated_at": "2026-10-09T09:59:22.753Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 19,
-    "fields": {
-      "user": null,
-      "session_key": "guest_test_sess_123",
-      "created_at": "2026-10-09T10:08:47.504Z",
-      "updated_at": "2026-10-09T10:08:47.504Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 20,
-    "fields": {
-      "user": null,
-      "session_key": "live_test_session_456",
-      "created_at": "2026-10-09T10:08:58.783Z",
-      "updated_at": "2026-10-09T10:08:58.783Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 22,
-    "fields": {
-      "user": 4,
-      "session_key": null,
-      "created_at": "2026-10-09T10:13:31.127Z",
-      "updated_at": "2026-10-09T10:13:31.127Z"
-    }
-  },
-  {
-    "model": "cart.cart",
-    "pk": 23,
-    "fields": {
-      "user": null,
-      "session_key": "sess_0ioiaw653noacn1xhxmkflt",
-      "created_at": "2026-10-09T10:16:15.919Z",
-      "updated_at": "2026-10-09T10:16:15.919Z"
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 4,
-    "fields": {
-      "cart": 3,
-      "product": 10,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 5,
-    "fields": {
-      "cart": 3,
-      "product": 9,
-      "quantity": 2
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 11,
-    "fields": {
-      "cart": 10,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 12,
-    "fields": {
-      "cart": 11,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 13,
-    "fields": {
-      "cart": 12,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 14,
-    "fields": {
-      "cart": 13,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 15,
-    "fields": {
-      "cart": 14,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 16,
-    "fields": {
-      "cart": 15,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 17,
-    "fields": {
-      "cart": 16,
-      "product": 1,
-      "quantity": 5
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 18,
-    "fields": {
-      "cart": 17,
-      "product": 1,
-      "quantity": 2
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 19,
-    "fields": {
-      "cart": 18,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 20,
-    "fields": {
-      "cart": 19,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "cart.cartitem",
-    "pk": 21,
-    "fields": {
-      "cart": 20,
-      "product": 1,
-      "quantity": 1
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-      "password": "pbkdf2_sha256$1500000$xAAz7OKThB9HXIslNdkRo4$P0rvNXNXS3apdiDqa8SNDqoGDc1EBak8gpbOmZSOoiM=",
-      "last_login": "2026-10-09T10:08:47.533Z",
-      "is_superuser": true,
-      "username": "admin",
-      "first_name": "",
-      "last_name": "",
-      "email": "admin@example.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2026-10-08T09:37:40.881Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-      "password": "pbkdf2_sha256$1500000$Kc11rOU2al0NrGsnHoNl23$LqROpdZasthm+ftpXf0If51gv7aDdQTEOh87P/RGD+Q=",
-      "last_login": "2026-10-08T12:25:09.872Z",
-      "is_superuser": false,
-      "username": "janu",
-      "first_name": "",
-      "last_name": "",
-      "email": "jahnaviampolu0805@gmail.com",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2026-10-08T12:25:08.084Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-      "password": "pbkdf2_sha256$1500000$aLjNp0KRP17MflyvFrCzzi$kcxCjSFu9OCdZykNo82a1RVsI9Tk5yVmMtbK2vv8h9s=",
-      "last_login": "2026-10-09T07:57:29.538Z",
-      "is_superuser": false,
-      "username": "bollalavanya24@gmail.com",
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2026-10-09T07:57:27.786Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 4,
-    "fields": {
-      "password": "pbkdf2_sha256$1500000$VppMpDmgfNNtkIezVINGQh$jStzscpm8DY6Th0Y3Yq9npy9U3/hBNRaFPsj/4gdy9c=",
-      "last_login": "2026-10-09T10:13:30.224Z",
-      "is_superuser": false,
-      "username": "ajay",
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2026-10-09T10:13:28.642Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  }
-]
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$xAAz7OKThB9HXIslNdkRo4$P0rvNXNXS3apdiDqa8SNDqoGDc1EBak8gpbOmZSOoiM=",
+    "last_login": "2026-10-09T10:08:47.533Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-10-08T09:37:40.881Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$Kc11rOU2al0NrGsnHoNl23$LqROpdZasthm+ftpXf0If51gv7aDdQTEOh87P/RGD+Q=",
+    "last_login": "2026-10-08T12:25:09.872Z",
+    "is_superuser": false,
+    "username": "janu",
+    "first_name": "",
+    "last_name": "",
+    "email": "jahnaviampolu0805@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-08T12:25:08.084Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$aLjNp0KRP17MflyvFrCzzi$kcxCjSFu9OCdZykNo82a1RVsI9Tk5yVmMtbK2vv8h9s=",
+    "last_login": "2026-10-09T07:57:29.538Z",
+    "is_superuser": false,
+    "username": "bollalavanya24@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-09T07:57:27.786Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$VppMpDmgfNNtkIezVINGQh$jStzscpm8DY6Th0Y3Yq9npy9U3/hBNRaFPsj/4gdy9c=",
+    "last_login": "2026-10-09T10:13:30.224Z",
+    "is_superuser": false,
+    "username": "ajay",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-09T10:13:28.642Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Electronics",
+    "slug": "electronics",
+    "description": "Browse Electronics products and deals",
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Audio & Gaming",
+    "slug": "audio-gaming",
+    "description": "Browse Audio & Gaming products and deals",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Mobiles",
+    "slug": "mobiles",
+    "description": "Browse Mobiles products and deals",
+    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Laptops",
+    "slug": "laptops",
+    "description": "Browse Laptops products and deals",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Cameras",
+    "slug": "cameras",
+    "description": "Browse Cameras products and deals",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "Watches",
+    "slug": "watches",
+    "description": "Browse Watches products and deals",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "name": "Fashion",
+    "slug": "fashion",
+    "description": "Browse Fashion products and deals",
+    "image": "https://images.unsplash.com/photo-1542272604-780c96856475?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "name": "Beauty",
+    "slug": "beauty",
+    "description": "Browse Beauty products and deals",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 9,
+  "fields": {
+    "name": "Home Appliances",
+    "slug": "home-appliances",
+    "description": "Browse Home Appliances products and deals",
+    "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 10,
+  "fields": {
+    "name": "Furniture",
+    "slug": "furniture",
+    "description": "Browse Furniture products and deals",
+    "image": "https://images.unsplash.com/photo-1580481077195-c328ad4f3647?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 11,
+  "fields": {
+    "name": "Toys",
+    "slug": "toys",
+    "description": "Browse Toys products and deals",
+    "image": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=500&auto=format&fit=crop&q=80"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "external_product_id": "B09G96TFF7",
+    "name": "Apple iPad (10th Generation): with A14 Bionic chip, 10.9-inch Liquid Retina Display, 64GB, Wi-Fi 6",
+    "brand": "Apple",
+    "description": "Colorfully reimagined and more versatile than ever, the all-screen 10.9-inch iPad with the A14 Bionic chip delivers power for creating, staying connected, and getting things done.",
+    "price": "34990.00",
+    "original_price": "39900.00",
+    "discount": 12,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 1,
+    "rating": "4.60",
+    "review_count": 8420,
+    "stock": 25,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B09G96TFF7",
+    "source": "Amazon",
+    "features": [
+      "Striking 10.9-inch Liquid Retina display with True Tone",
+      "A14 Bionic chip with 6-core CPU and 4-core GPU",
+      "12MP Wide back camera, landscape 12MP Ultra Wide front camera with Center Stage",
+      "Touch ID for secure authentication and Apple Pay",
+      "Wi-Fi 6 and USB-C connector for fast charging and accessories"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Model": "iPad 10th Gen",
+      "Display": "10.9-inch Liquid Retina",
+      "Storage": "64GB",
+      "Processor": "A14 Bionic",
+      "Connectivity": "Wi-Fi 6, Bluetooth 5.2"
+    },
+    "created_at": "2026-10-08T09:40:01.610Z",
+    "updated_at": "2026-10-08T09:40:01.610Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "external_product_id": "B0BSHF7WHW",
+    "name": "Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones",
+    "brand": "Sony",
+    "description": "The WH-1000XM5 headphones rewrite the rules for distraction-free listening with 2 processors, 8 microphones for noise cancellation, and Ultra-clear hands-free calling.",
+    "price": "26990.00",
+    "original_price": "34990.00",
+    "discount": 23,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 2,
+    "rating": "4.70",
+    "review_count": 14500,
+    "stock": 18,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0BSHF7WHW",
+    "source": "Amazon",
+    "features": [
+      "Industry Leading noise cancellation with two processors and 8 microphones",
+      "Magnificent Sound engineered to perfection with High-Resolution Audio",
+      "Crystal clear hands-free calling with 4 beamforming microphones",
+      "Up to 30-hour battery life with quick charge (3 min charge for 3 hours of playback)",
+      "Ultra-comfortable, lightweight design with soft fit leather"
+    ],
+    "specifications": {
+      "Brand": "Sony",
+      "Color": "Black",
+      "Weight": "250 Grams",
+      "Model Name": "WH-1000XM5",
+      "Battery Life": "30 Hours",
+      "Connectivity": "Bluetooth 5.2, 3.5mm Aux"
+    },
+    "created_at": "2026-10-08T09:40:01.622Z",
+    "updated_at": "2026-10-08T09:40:01.622Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "external_product_id": "B0C9QYBL8Q",
+    "name": "SteelSeries Arctis Nova 7 Wireless Multi-Platform Gaming Headset",
+    "brand": "SteelSeries",
+    "description": "Nova Acoustic System combines hardware and software for Almighty Audio and immersive gaming with 360° Spatial Audio and Parametric EQ.",
+    "price": "15499.00",
+    "original_price": "19999.00",
+    "discount": 22,
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 2,
+    "rating": "4.50",
+    "review_count": 3200,
+    "stock": 12,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0C9QYBL8Q",
+    "source": "Amazon",
+    "features": [
+      "Simultaneous Wireless (2.4GHz and Bluetooth) permits gaming and mobile audio mixing",
+      "38-hour battery life with USB-C fast charging",
+      "AI-Powered Noise-Cancelling microphone clears background noise",
+      "Multi-platform support for PC, Mac, PlayStation, and Switch"
+    ],
+    "specifications": {
+      "Brand": "SteelSeries",
+      "Model": "Arctis Nova 7",
+      "Battery": "38 Hours",
+      "Microphone": "Bidirectional ClearCast Gen 2",
+      "Frequency Response": "20–22,000 Hz"
+    },
+    "created_at": "2026-10-08T09:40:01.628Z",
+    "updated_at": "2026-10-08T09:40:01.628Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "external_product_id": "B0CHX1W1XY",
+    "name": "Apple iPhone 15 (128 GB) - Black",
+    "brand": "Apple",
+    "description": "Dynamic Island bubbles up alerts and Live Activities. 48MP Main camera with 2x Telephoto. Durable color-infused glass and aluminum design with USB-C.",
+    "price": "71290.00",
+    "original_price": "79900.00",
+    "discount": 11,
+    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 3,
+    "rating": "4.60",
+    "review_count": 9850,
+    "stock": 30,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0CHX1W1XY",
+    "source": "Amazon",
+    "features": [
+      "Dynamic Island bubbles up alerts and Live Activities so you do not miss them",
+      "48MP Main camera with 2X optical-quality Telephoto for breathtaking detail",
+      "A16 Bionic chip powers advanced computational photography and smooth performance",
+      "USB-C connector lets you charge your Mac or iPad with the same cable",
+      "Ceramic Shield front is tougher than any smartphone glass"
+    ],
+    "specifications": {
+      "OS": "iOS 17",
+      "Brand": "Apple",
+      "Model": "iPhone 15",
+      "Camera": "48MP Dual Camera System",
+      "Display": "6.1-inch Super Retina XDR",
+      "Storage": "128 GB"
+    },
+    "created_at": "2026-10-08T09:40:01.639Z",
+    "updated_at": "2026-10-08T09:40:01.639Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "external_product_id": "B0CX8X79W7",
+    "name": "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 12GB, 256GB Storage)",
+    "brand": "Samsung",
+    "description": "Meet Galaxy S24 Ultra, the ultimate form of Galaxy Ultra with a new titanium exterior and a 6.8-inch flat display. Powered by Galaxy AI.",
+    "price": "129999.00",
+    "original_price": "134999.00",
+    "discount": 4,
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 3,
+    "rating": "4.70",
+    "review_count": 4120,
+    "stock": 14,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0CX8X79W7",
+    "source": "Amazon",
+    "features": [
+      "Galaxy AI: Circle to Search, Live Translate, and Note Assist",
+      "Titanium Shield built right into the frame with Corning Gorilla Armor",
+      "200MP Main Camera with ProVisual engine and 5x optical zoom",
+      "Built-in S Pen continues the legacy of Note with supreme precision"
+    ],
+    "specifications": {
+      "RAM": "12 GB",
+      "Brand": "Samsung",
+      "Model": "Galaxy S24 Ultra",
+      "Battery": "5000 mAh",
+      "Storage": "256 GB",
+      "Processor": "Snapdragon 8 Gen 3 Mobile Platform"
+    },
+    "created_at": "2026-10-08T09:40:01.645Z",
+    "updated_at": "2026-10-08T09:40:01.645Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "external_product_id": "B0CM5JV229",
+    "name": "Apple 2023 MacBook Pro (14-inch, M3 Pro chip, 18GB Unified Memory, 512GB)",
+    "brand": "Apple",
+    "description": "With M3 Pro, the MacBook Pro powers through extremely demanding workflows like manipulating gigapixel panoramas or compiling millions of lines of code.",
+    "price": "194900.00",
+    "original_price": "199900.00",
+    "discount": 3,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 4,
+    "rating": "4.80",
+    "review_count": 2180,
+    "stock": 8,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0CM5JV229",
+    "source": "Amazon",
+    "features": [
+      "Supercharged by M3 Pro with up to 12-core CPU and 18-core GPU",
+      "Up to 22 hours of battery life thanks to Apple silicon power efficiency",
+      "Liquid Retina XDR display with 1,000 nits sustained and 1,600 nits peak brightness",
+      "Advanced 1080p FaceTime HD camera, studio-quality three-mic array, six-speaker sound"
+    ],
+    "specifications": {
+      "RAM": "18 GB Unified Memory",
+      "SSD": "512 GB",
+      "Brand": "Apple",
+      "Weight": "1.61 kg",
+      "Display": "14.2-inch Liquid Retina XDR",
+      "Processor": "M3 Pro"
+    },
+    "created_at": "2026-10-08T09:40:01.655Z",
+    "updated_at": "2026-10-08T09:40:01.655Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "external_product_id": "B0B8C8Q6W3",
+    "name": "Dell XPS 13 Plus Laptop, Intel Core i7-1260P, 16GB, 1TB SSD, 13.4\" UHD+ OLED Touch",
+    "brand": "Dell",
+    "description": "Dell XPS 13 Plus is twice as powerful as before in the same size, crafted with CNC machined aluminum and glass with zero-lattice keyboard.",
+    "price": "149990.00",
+    "original_price": "182000.00",
+    "discount": 18,
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 4,
+    "rating": "4.40",
+    "review_count": 920,
+    "stock": 10,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0B8C8Q6W3",
+    "source": "Amazon",
+    "features": [
+      "12th Gen Intel Core i7-1260P 12-core processor",
+      "13.4-inch UHD+ (3840 x 2400) OLED Touch anti-reflective 400-nit display",
+      "Capacitive touch function row, seamless glass touchpad, edge-to-edge keyboard",
+      "Dual fans with larger air intake for quiet, cool high performance"
+    ],
+    "specifications": {
+      "RAM": "16GB LPDDR5",
+      "Brand": "Dell",
+      "Series": "XPS 9320",
+      "Storage": "1TB M.2 PCIe NVMe SSD",
+      "Processor": "Intel Core i7-1260P"
+    },
+    "created_at": "2026-10-08T09:40:01.660Z",
+    "updated_at": "2026-10-08T09:40:01.660Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "external_product_id": "B08KSK8G9C",
+    "name": "Sony Alpha 7 IV Full-Frame Mirrorless Interchangeable Lens Camera (Body Only)",
+    "brand": "Sony",
+    "description": "Breathtaking imagery with 33MP Exmor R back-illuminated CMOS sensor and BIONZ XR processing engine with 4K 60p 10-bit 4:2:2 movie recording.",
+    "price": "214990.00",
+    "original_price": "242990.00",
+    "discount": 12,
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 5,
+    "rating": "4.80",
+    "review_count": 1640,
+    "stock": 6,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B08KSK8G9C",
+    "source": "Amazon",
+    "features": [
+      "33MP full-frame Exmor R back-illuminated CMOS sensor",
+      "BIONZ XR image processing engine with up to 8x processing power",
+      "Up to 4K 60p 10-bit 4:2:2 movie recording with full pixel readout",
+      "Real-time Eye AF for humans, animals, and birds in stills and video"
+    ],
+    "specifications": {
+      "Brand": "Sony",
+      "Model": "ILCE-7M4",
+      "Mount": "Sony E-Mount",
+      "Video": "4K 60p 10-Bit",
+      "Sensor": "33 MP Full-Frame Exmor R CMOS"
+    },
+    "created_at": "2026-10-08T09:40:01.671Z",
+    "updated_at": "2026-10-08T09:40:01.671Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "external_product_id": "B0CHWZ8D6P",
+    "name": "Apple Watch Series 9 [GPS 45mm] Smartwatch with Midnight Aluminum Case",
+    "brand": "Apple",
+    "description": "S9 SiP enables a supersubtle new way to quickly and easily interact with your Apple Watch without touching the screen: Double Tap.",
+    "price": "41900.00",
+    "original_price": "44900.00",
+    "discount": 7,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 6,
+    "rating": "4.60",
+    "review_count": 5210,
+    "stock": 16,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0CHWZ8D6P",
+    "source": "Amazon",
+    "features": [
+      "Powerful S9 chip with incredible Double Tap gesture control",
+      "Advanced health sensors for ECG, Blood Oxygen, and Sleep stages tracking",
+      "Fall Detection and Crash Detection with Emergency SOS",
+      "Brighter display with up to 2000 nits, twice as bright as Series 8"
+    ],
+    "specifications": {
+      "Size": "45mm",
+      "Brand": "Apple",
+      "Connectivity": "GPS, Bluetooth 5.3, Wi-Fi",
+      "Water Resistance": "50 meters"
+    },
+    "created_at": "2026-10-08T09:40:01.682Z",
+    "updated_at": "2026-10-08T09:40:01.682Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "external_product_id": "B08KT37DFG",
+    "name": "Fossil Gen 6 Touchscreen Smartwatch with Alexa Built-in, Speaker, Heart Rate",
+    "brand": "Fossil",
+    "description": "Fossil Gen 6 with Snapdragon Wear 4100+ platform delivers 30% faster app loading and improved battery life with rapid charging.",
+    "price": "14995.00",
+    "original_price": "24995.00",
+    "discount": 40,
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 6,
+    "rating": "4.20",
+    "review_count": 3100,
+    "stock": 19,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B08KT37DFG",
+    "source": "Amazon",
+    "features": [
+      "Snapdragon Wear 4100+ platform delivers ultra-smooth responsiveness",
+      "Charges to 80% in approximately 30 minutes with magnetic charger",
+      "Continuously tracks heart rate and SpO2 blood oxygen measurements",
+      "Make and take phone calls directly from your wrist when connected to phone"
+    ],
+    "specifications": {
+      "OS": "Wear OS by Google",
+      "Brand": "Fossil",
+      "Sensors": "Heart Rate, SpO2, Accelerometer, Compass",
+      "Case Size": "44mm"
+    },
+    "created_at": "2026-10-08T09:40:01.689Z",
+    "updated_at": "2026-10-08T09:40:01.690Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "external_product_id": "B0797MG3S1",
+    "name": "Levi's Men's 511 Slim Fit Stretch Jeans",
+    "brand": "Levi's",
+    "description": "A modern slim with room to move, the 511 Slim Fit Jeans are a classic since right now. Cut close through the thigh with a slim leg opening.",
+    "price": "2399.00",
+    "original_price": "3999.00",
+    "discount": 40,
+    "image": "https://images.unsplash.com/photo-1542272604-780c96856475?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 7,
+    "rating": "4.30",
+    "review_count": 8900,
+    "stock": 50,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B0797MG3S1",
+    "source": "Amazon",
+    "features": [
+      "99% Cotton, 1% Elastane with Levi's Flex stretch denim",
+      "Sits below the waist with slim fit from hip to ankle",
+      "Zip fly with signature metal button closure and 5-pocket styling",
+      "Machine washable with reinforced stitching"
+    ],
+    "specifications": {
+      "Fit": "Slim Fit",
+      "Brand": "Levi's",
+      "Closure": "Button & Zip",
+      "Material": "99% Cotton, 1% Elastane"
+    },
+    "created_at": "2026-10-08T09:40:01.698Z",
+    "updated_at": "2026-10-08T09:40:01.698Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "external_product_id": "B09DFQJ579",
+    "name": "Philips Satinelle Essential Corded Compact Epilator with Sensitive Cap",
+    "brand": "Philips",
+    "description": "Gentle tweezing discs remove hairs as short as 0.5mm without pulling the skin. Comes with sensitive area cap for delicate zones.",
+    "price": "2499.00",
+    "original_price": "3295.00",
+    "discount": 24,
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 8,
+    "rating": "4.20",
+    "review_count": 4780,
+    "stock": 25,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B09DFQJ579",
+    "source": "Amazon",
+    "features": [
+      "Efficient epilation system pulls out hairs from the root",
+      "2 speed settings to grab thinner and thicker hairs",
+      "Profiled, ergonomic grip for comfortable handling",
+      "Washable epilation head for extra hygiene and easy cleaning"
+    ],
+    "specifications": {
+      "Brand": "Philips",
+      "Warranty": "2 Year Worldwide Guarantee",
+      "Power Source": "Corded Electric",
+      "Speed Settings": "2 Speeds"
+    },
+    "created_at": "2026-10-08T09:40:01.709Z",
+    "updated_at": "2026-10-08T09:40:01.709Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "external_product_id": "B08N5KM61Q",
+    "name": "Dyson V8 Absolute Cordless Vacuum Cleaner, Powerful Suction with 2 Cleaner Heads",
+    "brand": "Dyson",
+    "description": "Engineered for homes with pets. Captures allergens and expels cleaner air than the air you breathe with up to 40 minutes of fade-free power.",
+    "price": "32900.00",
+    "original_price": "43900.00",
+    "discount": 25,
+    "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 9,
+    "rating": "4.50",
+    "review_count": 6120,
+    "stock": 11,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B08N5KM61Q",
+    "source": "Amazon",
+    "features": [
+      "Powered by the Dyson digital motor V8 spinning at up to 110,000 rpm",
+      "Up to 40 minutes of fade-free suction across carpets and hard floors",
+      "Whole-machine filtration captures 99.99% of microscopic particles as small as 0.3 microns",
+      "No-touch bin emptying drives out dust and debris in a single action"
+    ],
+    "specifications": {
+      "Brand": "Dyson",
+      "Model": "V8 Absolute",
+      "Weight": "2.61 kg",
+      "Run Time": "40 Minutes",
+      "Suction Power": "115 AW"
+    },
+    "created_at": "2026-10-08T09:40:01.717Z",
+    "updated_at": "2026-10-08T09:40:01.717Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "external_product_id": "B08B5Q23L8",
+    "name": "Green Soul Monster Ultimate Ergonomic Gaming & Office Chair",
+    "brand": "Green Soul",
+    "description": "Ergonomically engineered gaming chair with premium breathable spandex fabric, heavy-duty metal base, and magnetic memory foam head pillow.",
+    "price": "17990.00",
+    "original_price": "29990.00",
+    "discount": 40,
+    "image": "https://images.unsplash.com/photo-1580481077195-c328ad4f3647?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1505797149-43b0069ec26b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 10,
+    "rating": "4.50",
+    "review_count": 4190,
+    "stock": 15,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B08B5Q23L8",
+    "source": "Amazon",
+    "features": [
+      "Spandex + PU leather fabric for optimal breathability and luxury comfort",
+      "4D adjustable armrests: height, depth, angle, and horizontal alignment",
+      "Multifunctional frog mechanism with tilt lock between 90° to 180°",
+      "Heavy-duty alloy wheelbase with 65mm smooth polyurethane casters"
+    ],
+    "specifications": {
+      "Brand": "Green Soul",
+      "Recline": "Up to 180 degrees",
+      "Frame Material": "Heavy Duty Steel",
+      "Maximum Weight Capacity": "150 kg"
+    },
+    "created_at": "2026-10-08T09:40:01.726Z",
+    "updated_at": "2026-10-08T09:40:01.726Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "external_product_id": "B07W5Q7J4Z",
+    "name": "LEGO Technic McLaren Senna GTR Racing Sports Car Building Kit (830 Pieces)",
+    "brand": "LEGO",
+    "description": "Packed with authentic features inspired by the original track-focused supercar icon, from the V8 engine with moving pistons to dihedral doors.",
+    "price": "4999.00",
+    "original_price": "5999.00",
+    "discount": 17,
+    "image": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=800&auto=format&fit=crop&q=80",
+    "additional_images": [
+      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "category": 11,
+    "rating": "4.80",
+    "review_count": 7820,
+    "stock": 22,
+    "availability": "In Stock",
+    "product_url": "https://www.amazon.in/dp/B07W5Q7J4Z",
+    "source": "Amazon",
+    "features": [
+      "Authentic recreation of the track-focused McLaren Senna GTR supercar",
+      "Realistic details include V8 engine with moving pistons and opening dihedral doors",
+      "Steer the LEGO toy supercar using the wheel on the roof",
+      "830-piece building set makes a stunning display model"
+    ],
+    "specifications": {
+      "Brand": "LEGO",
+      "Model": "42123",
+      "Age Range": "10+ Years",
+      "Number of Pieces": "830"
+    },
+    "created_at": "2026-10-08T09:40:01.737Z",
+    "updated_at": "2026-10-08T09:40:01.737Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "session_key": "avby6ihrhu6qbue690wvoz1oi4e6n9mx",
+    "created_at": "2026-10-08T09:42:11.145Z",
+    "updated_at": "2026-10-08T09:42:11.145Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "session_key": "77gx1mv8o7rxl2c5xgks0zj5982pasbm",
+    "created_at": "2026-10-08T09:50:17.554Z",
+    "updated_at": "2026-10-08T09:50:17.554Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "session_key": "sess_j7kft1mea8bp1bxoga67m",
+    "created_at": "2026-10-08T09:58:39.206Z",
+    "updated_at": "2026-10-08T09:58:39.206Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "session_key": "sess_mxbhrduh468zo6xr658y5r",
+    "created_at": "2026-10-08T10:14:59.082Z",
+    "updated_at": "2026-10-08T10:14:59.082Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "janu"
+    ],
+    "session_key": null,
+    "created_at": "2026-10-08T12:25:10.823Z",
+    "updated_at": "2026-10-08T12:25:10.823Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "bollalavanya24@gmail.com"
+    ],
+    "session_key": null,
+    "created_at": "2026-10-09T07:57:30.631Z",
+    "updated_at": "2026-10-09T07:57:30.631Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 10,
+  "fields": {
+    "user": null,
+    "session_key": "463axtuqjo20k5kkmssxufphuytrfk24",
+    "created_at": "2026-10-09T09:49:25.634Z",
+    "updated_at": "2026-10-09T09:49:25.634Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "session_key": "0qsjsdk4l9n0hdju1esk0383nawxmutl",
+    "created_at": "2026-10-09T09:49:42.083Z",
+    "updated_at": "2026-10-09T09:49:42.083Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 12,
+  "fields": {
+    "user": null,
+    "session_key": "tr5hduczmqb071afl5ssih7m1exxtwol",
+    "created_at": "2026-10-09T09:50:12.344Z",
+    "updated_at": "2026-10-09T09:50:12.344Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "session_key": "58385jtxkfwm0v40iymaxwjkk7iqzddk",
+    "created_at": "2026-10-09T09:51:37.611Z",
+    "updated_at": "2026-10-09T09:51:37.611Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "session_key": "aecxwvs8tnfzyll0j19wgec31vtj4vkw",
+    "created_at": "2026-10-09T09:52:12.547Z",
+    "updated_at": "2026-10-09T09:52:12.547Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 15,
+  "fields": {
+    "user": null,
+    "session_key": "iczhmi1s6kwwk4gc0f86cskqz2xhi6x3",
+    "created_at": "2026-10-09T09:55:37.085Z",
+    "updated_at": "2026-10-09T09:55:37.085Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "session_key": null,
+    "created_at": "2026-10-09T09:58:52.748Z",
+    "updated_at": "2026-10-09T09:58:52.748Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 17,
+  "fields": {
+    "user": null,
+    "session_key": "xm6ytdk5q2z7mtjaaqgzv981stui30ex",
+    "created_at": "2026-10-09T09:59:01.963Z",
+    "updated_at": "2026-10-09T09:59:01.963Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "session_key": "zcmwmdkj9p69vt52n4h2vq2z2inl7qs7",
+    "created_at": "2026-10-09T09:59:22.753Z",
+    "updated_at": "2026-10-09T09:59:22.753Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "session_key": "guest_test_sess_123",
+    "created_at": "2026-10-09T10:08:47.504Z",
+    "updated_at": "2026-10-09T10:08:47.504Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "session_key": "live_test_session_456",
+    "created_at": "2026-10-09T10:08:58.783Z",
+    "updated_at": "2026-10-09T10:08:58.783Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 22,
+  "fields": {
+    "user": [
+      "ajay"
+    ],
+    "session_key": null,
+    "created_at": "2026-10-09T10:13:31.127Z",
+    "updated_at": "2026-10-09T10:13:31.127Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 23,
+  "fields": {
+    "user": null,
+    "session_key": "sess_0ioiaw653noacn1xhxmkflt",
+    "created_at": "2026-10-09T10:16:15.919Z",
+    "updated_at": "2026-10-09T10:16:15.919Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "session_key": "test_session_123",
+    "created_at": "2026-10-12T11:00:08.006Z",
+    "updated_at": "2026-10-12T11:00:08.007Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 26,
+  "fields": {
+    "user": null,
+    "session_key": "j48hskr1v7ghmhing58m4pxfm1zx5bc2",
+    "created_at": "2026-10-13T07:59:49.229Z",
+    "updated_at": "2026-10-13T07:59:49.229Z"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 4,
+  "fields": {
+    "cart": 3,
+    "product": 10,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 5,
+  "fields": {
+    "cart": 3,
+    "product": 9,
+    "quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 11,
+  "fields": {
+    "cart": 10,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 12,
+  "fields": {
+    "cart": 11,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 13,
+  "fields": {
+    "cart": 12,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 14,
+  "fields": {
+    "cart": 13,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 15,
+  "fields": {
+    "cart": 14,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 16,
+  "fields": {
+    "cart": 15,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 17,
+  "fields": {
+    "cart": 16,
+    "product": 1,
+    "quantity": 5
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 18,
+  "fields": {
+    "cart": 17,
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 19,
+  "fields": {
+    "cart": 18,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 20,
+  "fields": {
+    "cart": 19,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 21,
+  "fields": {
+    "cart": 20,
+    "product": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 27,
+  "fields": {
+    "cart": 23,
+    "product": 8,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 28,
+  "fields": {
+    "cart": 26,
+    "product": 1,
+    "quantity": 1
+  }
+}
+]
