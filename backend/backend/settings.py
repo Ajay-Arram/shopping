@@ -19,13 +19,22 @@ else:
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-shopping-cart-secret-key-2026')
-DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-allowed_hosts_env = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,*')
+IS_RENDER = os.getenv('RENDER') == 'true' or bool(os.getenv('RENDER_EXTERNAL_HOSTNAME'))
+
+# In production on Render, default DEBUG to False; locally default to True
+if IS_RENDER:
+    DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
+else:
+    DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
+
+allowed_hosts_env = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,shopping-omap.onrender.com,*.onrender.com')
 ALLOWED_HOSTS = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
 render_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
 if render_hostname and render_hostname not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append(render_hostname)
+if 'shopping-omap.onrender.com' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('shopping-omap.onrender.com')
 if '.onrender.com' not in ALLOWED_HOSTS and '*' not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append('.onrender.com')
 
@@ -83,29 +92,49 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database Configuration
 # Supports Supabase PostgreSQL via DATABASE_URL or local MySQL / SQLite fallback
 DATABASE_URL = os.getenv('DATABASE_URL')
-IS_RENDER = os.getenv('RENDER') == 'true' or bool(os.getenv('RENDER_EXTERNAL_HOSTNAME'))
 
 if DATABASE_URL:
+    default_conn_max_age = int(os.getenv('DB_CONN_MAX_AGE', '600'))
     DATABASES = {
         'default': dj_database_url.parse(
             DATABASE_URL,
-            conn_max_age=600,
+            conn_max_age=default_conn_max_age,
             conn_health_checks=True,
         )
     }
     db_default = DATABASES['default']
     # Supabase PostgreSQL / PgBouncer connection optimizations
     if 'postgresql' in db_default.get('ENGINE', ''):
+        # Disable server-side cursors for compatibility with PgBouncer
         db_default['DISABLE_SERVER_SIDE_CURSORS'] = True
+
+        # Ensure OPTIONS dictionary exists and enforce sslmode='require'
         if not isinstance(db_default.get('OPTIONS'), dict):
             db_default['OPTIONS'] = {}
         db_default['OPTIONS'].setdefault('sslmode', 'require')
 
-        # When using Supabase PgBouncer transaction pooler (port 6543),
-        # disable persistent connections and prepared statements.
-        if str(db_default.get('PORT')) == '6543':
+        # Port-specific pooling configurations
+        port = str(db_default.get('PORT', '5432'))
+        if port == '6543':
+            # PgBouncer Transaction Pooler (port 6543):
+            # Disable persistent connections and prepared statements
             db_default['CONN_MAX_AGE'] = 0
             db_default['OPTIONS']['prepare_threshold'] = None
+        else:
+            # Session Pooler (port 5432) or standard connection:
+            # Prepared statements are supported, persistent connections can be used
+            db_default['CONN_MAX_AGE'] = default_conn_max_age
+
+        # Detect direct Supabase IPv6 host on Render and provide immediate clear guidance
+        host = db_default.get('HOST', '')
+        if IS_RENDER and host.startswith('db.') and host.endswith('.supabase.co'):
+            from django.core.exceptions import ImproperlyConfigured
+            raise ImproperlyConfigured(
+                f"Direct Supabase host '{host}' resolves to IPv6 only, which Render cannot reach "
+                f"(causes 'Network is unreachable'). Please update DATABASE_URL in Render to use the "
+                f"Supabase Connection Pooler URI (Session mode: host 'aws-0-<region>.pooler.supabase.com', "
+                f"port 5432, username 'postgres.<project-ref>')."
+            )
 elif IS_RENDER:
     # Guard against accidental localhost MySQL fallback when deployed to Render
     from django.core.exceptions import ImproperlyConfigured
@@ -237,6 +266,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://localhost:8080',
     'http://127.0.0.1:8080',
+    'https://shopping-omap.onrender.com',
     'https://*.onrender.com',
 ]
 
